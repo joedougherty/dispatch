@@ -5,7 +5,9 @@ import sys
 # Each function here corresponds to a key in the COMMANDS dict #
 ################################################################
 def help(args):
-    for c in COMMANDS.keys():
+    CMDS = COMMANDS.keys()
+    CMDS.sort()
+    for c in CMDS:
         print(c + '  \t\t|  ' + COMMANDS.get(c)['help'])
 
 def disconnect(args):
